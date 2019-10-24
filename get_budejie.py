@@ -1,4 +1,4 @@
-import requests, re
+import requests
 from lxml import etree
 import csv
 import threading
@@ -74,7 +74,7 @@ def main():
     writer.writerow(("content", "link"))
 
     base_url = "http://www.budejie.com/text/{}"
-    for x in range(1, 11):
+    for x in range(1, 11):  # 默认抓取前10页
         page_url = base_url.format(x)
         page_queue.put(page_url)
 
